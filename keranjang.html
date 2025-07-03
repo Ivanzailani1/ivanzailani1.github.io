@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang Belanja - Toko Online Kita</title>
+    <link rel="stylesheet" href="style.css"> <style>
+        /* CSS Tambahan untuk Halaman Keranjang */
+        .cart-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .cart-item {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+            margin-bottom: 15px;
+        }
+        .cart-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .cart-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-right: 20px;
+            flex-shrink: 0; /* Mencegah gambar menyusut */
+        }
+        .item-details {
+            flex-grow: 1;
+        }
+        .item-details h3 {
+            margin: 0 0 5px 0;
+            color: #007bff;
+            font-size: 1.2em;
+        }
+        .item-details p {
+            margin: 0;
+            color: #555;
+            font-size: 0.9em;
+        }
+        .item-price {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #e60023;
+            margin-left: 20px;
+            flex-shrink: 0;
+        }
+        .remove-item {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8em;
+            margin-left: 20px;
+            transition: background-color 0.2s;
+        }
+        .remove-item:hover {
+            background-color: #c82333;
+        }
+        .cart-summary {
+            margin-top: 30px;
+            border-top: 2px solid #007bff;
+            padding-top: 20px;
+            text-align: right;
+        }
+        .cart-summary p {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .checkout-button {
+            background-color: #28a745;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.2em;
+            cursor: pointer;
+            text-decoration: none; /* Untuk kasus jika ini adalah link */
+            display: inline-block; /* Agar bisa diatur padding dan margin */
+            margin-top: 20px;
+            transition: background-color 0.2s;
+        }
+        .checkout-button:hover {
+            background-color: #218838;
+        }
+        .empty-cart-message {
+            text-align: center;
+            padding: 50px;
+            font-size: 1.3em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Keranjang Belanja Anda</h1>
+        <p>Lihat item yang Anda pilih</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Beranda</a>
+        <a href="produk.html">Produk</a>
+        <a href="tentangkami.html">Tentang Kami</a>
+        <a href="kontak.html">Kontak</a>
+        <a href="keranjang.html">Keranjang</a>
+    </nav>
+
+    <div class="container">
+        <h2 class="section-title">Isi Keranjang Anda</h2>
+
+        <div class="cart-container">
+            <div class="cart-item">
+                <img src="C:\Users\ivanj\Documents\smt6html\poto poto\hp terbaru.jpg" alt="Smartphone Terbaru">
+                <div class="item-details">
+                    <h3>Smartphone Terbaru</h3>
+                    <p>Jumlah: 1</p>
+                    <p>Kategori: Elektronik</p>
+                </div>
+                <div class="item-price">Rp 5.000.000</div>
+                <button class="remove-item">Hapus</button>
+            </div>
+
+            <div class="cart-item">
+                <img src="C:\Users\ivanj\Documents\smt6html\poto poto\hp premium.jpg" alt="Headphone Premium">
+                <div class="item-details">
+                    <h3>Headphone Premium</h3>
+                    <p>Jumlah: 2</p>
+                    <p>Kategori: Aksesoris</p>
+                </div>
+                <div class="item-price">Rp 3.000.000 <small>(@Rp 1.500.000)</small></div>
+                <button class="remove-item">Hapus</button>
+            </div>
+
+            <div class="cart-item">
+                <img src="C:\Users\ivanj\Documents\smt6html\poto poto\smartwatch canggih.jpg" alt="Smartwatch Canggih">
+                <div class="item-details">
+                    <h3>Smartwatch Canggih</h3>
+                    <p>Jumlah: 1</p>
+                    <p>Kategori: Wearable</p>
+                </div>
+                <div class="item-price">Rp 2.000.000</div>
+                <button class="remove-item">Hapus</button>
+            </div>
+
+            <div class="cart-summary">
+                <p>Subtotal: Rp 10.000.000</p>
+                <p>Ongkos Kirim: Rp 25.000</p>
+                <p>Total: Rp 10.025.000</p>
+                <a href="https://wa.me/6285166988597?text=Saya Memesan Smartphone terbaru, smartphone premium , smartwatch canggih" target="_blank" class="checkout-button">Lanjutkan ke Pembayaran</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Toko Online Kita. Semua Hak Dilindungi.</p>
+        <p>Dibuat dengan ❤️ di Indonesia</p>
+    </footer>
+
+</body>
+</html>
